@@ -395,25 +395,28 @@
     </div>
   </header>
   <main class="main">
-    <div class="wrapper">
-      <div class="social-fixed">
-        <div class="social-fixed__mobile">
-          <i class="fas fa-user-circle"></i>
-        </div>
-        <div class="wrapper">
-          <ul class="social-list">
-            <li class="social-list__item">
-              <a href="#"><i class="fab fa-skype"></i></a>
-            </li>
-            <li class="social-list__item">
-              <a href="#"><i class="fab fa-viber"></i></a>
-            </li>
-            <li class="social-list__item">
-              <a href="#"><i class="fab fa-telegram-plane"></i></a>
-            </li>
-          </ul>
-        </div>
+    <div class="social-fixed">
+      <div class="social-fixed__mobile">
+        <i class="fas fa-user-circle"></i>
       </div>
+      <div class="wrapper">
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a href="#"><i class="fab fa-skype"></i></a>
+            <a class="add-us" href="#">Добавить нас</a>
+          </li>
+          <li class="social-list__item">
+            <a href="#"><i class="fab fa-viber"></i></a>
+            <a class="add-us" href="#">Добавить нас</a>
+          </li>
+          <li class="social-list__item">
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a class="add-us" href="#">Добавить нас</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrapper">
       <div class="breadcrumbs">
         <ul class="breadcrumbs-list">
           <li class="breadcrumbs-list__item"><a href="#">Главная</a></li>
@@ -1549,7 +1552,7 @@
             </div>
           </div>
           <div class="catalogue__content" data-target="product-list">
-            <div class="product-card hot product-card--list"  data-amount="0" data-id="2" data-price='1' data-modifier='1'>
+            <div class="product-card hot product-card--list js-card" data-id="101" data-price='1' data-modifier='0' data-current__price='1000'>
               <div class="product-card__top">
                 <div class="product-card__download">
                   <i class="fas fa-file-download"></i>
@@ -1574,10 +1577,10 @@
                   <span class="brand">Edimax</span>
                   <span class="price"><span class="price-from">от</span> <span class="price-num">400 004</span> грн</span>
                 </div>
-                <div class="product-card__button">
-                  <a href="#" class="buy">В корзину</a>
+                <div class="product-card__button js-product__button">
+                  <span href="#" class="buy">В корзину</span>
                   <span class="ask">Узнать цену</span>
-                  <a href="#" class="modifier">Выбрать Модификацию</a>
+                  <span class="remove">Удалить</span>
                 </div>
               </div>
               <div class="product-card__files">
@@ -1612,7 +1615,7 @@
                 </ul>
               </div>
             </div>
-            <div class="product-card hot product-card--list"  data-amount="0" data-id="2" data-price='1' data-modifier='0'>
+            <div class="product-card hot product-card--list js-card" data-id="102" data-price='1' data-modifier='0' data-current__price='1000'>
               <div class="product-card__top">
                 <div class="product-card__download">
                   <i class="fas fa-file-download"></i>
@@ -1637,10 +1640,10 @@
                   <span class="brand">Edimax</span>
                   <span class="price"><span class="price-from">от</span> <span class="price-num">400 004</span> грн</span>
                 </div>
-                <div class="product-card__button">
-                  <a href="#" class="buy">В корзину</a>
+                <div class="product-card__button js-product__button">
+                  <span href="#" class="buy">В корзину</span>
                   <span class="ask">Узнать цену</span>
-                  <a href="#" class="modifier">Выбрать Модификацию</a>
+                  <span class="remove">Удалить</span>
                 </div>
               </div>
               <div class="product-card__files">
@@ -1675,7 +1678,7 @@
                 </ul>
               </div>
             </div>
-            <div class="product-card hot product-card--list"  data-amount="1" data-id="2" data-price='0' data-modifier='0'>
+            <div class="product-card hot product-card--list js-card" data-id="103" data-price='1' data-modifier='0' data-current__price='1000'>
               <div class="product-card__top">
                 <div class="product-card__download">
                   <i class="fas fa-file-download"></i>
@@ -1700,10 +1703,10 @@
                   <span class="brand">Edimax</span>
                   <span class="price"><span class="price-from">от</span> <span class="price-num">400 004</span> грн</span>
                 </div>
-                <div class="product-card__button">
-                  <a href="#" class="buy">В корзину</a>
+                <div class="product-card__button js-product__button">
+                  <span href="#" class="buy">В корзину</span>
                   <span class="ask">Узнать цену</span>
-                  <a href="#" class="modifier">Выбрать Модификацию</a>
+                  <span class="remove">Удалить</span>
                 </div>
               </div>
               <div class="product-card__files">
@@ -1738,7 +1741,7 @@
                 </ul>
               </div>
             </div>
-            <div class="product-card hot product-card--list" data-id="2" data-price='0' data-modifier='1'>
+            <div class="product-card hot product-card--list js-card" data-id="104" data-price='1' data-modifier='0' data-current__price='1000'>
               <div class="product-card__top">
                 <div class="product-card__download">
                   <i class="fas fa-file-download"></i>
@@ -1763,10 +1766,10 @@
                   <span class="brand">Edimax</span>
                   <span class="price"><span class="price-from">от</span> <span class="price-num">400 004</span> грн</span>
                 </div>
-                <div class="product-card__button">
-                  <a href="#" class="buy">В корзину</a>
+                <div class="product-card__button js-product__button">
+                  <span href="#" class="buy">В корзину</span>
                   <span class="ask">Узнать цену</span>
-                  <a href="#" class="modifier">Выбрать Модификацию</a>
+                  <span class="remove">Удалить</span>
                 </div>
               </div>
               <div class="product-card__files">
@@ -1801,7 +1804,7 @@
                 </ul>
               </div>
             </div>
-            <div class="product-card hot product-card--list" data-amount="1" data-id="2" data-price='1' data-modifier='1'>
+            <div class="product-card hot product-card--list js-card" data-id="105" data-price='1' data-modifier='0' data-current__price='1000'>
               <div class="product-card__top">
                 <div class="product-card__download">
                   <i class="fas fa-file-download"></i>
@@ -1826,73 +1829,10 @@
                   <span class="brand">Edimax</span>
                   <span class="price"><span class="price-from">от</span> <span class="price-num">400 004</span> грн</span>
                 </div>
-                <div class="product-card__button">
-                  <a href="#" class="buy">В корзину</a>
+                <div class="product-card__button js-product__button">
+                  <span href="#" class="buy">В корзину</span>
                   <span class="ask">Узнать цену</span>
-                  <a href="#" class="modifier">Выбрать Модификацию</a>
-                </div>
-              </div>
-              <div class="product-card__files">
-                <ul class="files-list">
-                  <li class="files-list__item">
-                    <a href="#" class="files-list__link">
-                      <img src="../img/pdf.png" alt="">
-                      <div class="files-list__text">
-                        <p class="title">Описание LC, FC, SC и ST коннекторов</p>
-                        <p class="date">2015.12.02</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="files-list__item">
-                    <a href="#" class="files-list__link">
-                      <img src="../img/doc.png" alt="">
-                      <div class="files-list__text">
-                        <p class="title">Описание LC, FC, SC и ST коннекторов</p>
-                        <p class="date">2015.12.02</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="files-list__item">
-                    <a href="#" class="files-list__link">
-                      <img src="../img/zip.png" alt="">
-                      <div class="files-list__text">
-                        <p class="title">Описание LC, FC, SC и ST коннекторов</p>
-                        <p class="date">2015.12.02</p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="product-card hot product-card--list"  data-amount="1" data-id="2" data-price='1' data-modifier='0'>
-              <div class="product-card__top">
-                <div class="product-card__download">
-                  <i class="fas fa-file-download"></i>
-                </div>
-                <div class="product-card__event">
-                  <span class="title">Акция</span>
-                </div>
-                <div class="product-card__img">
-                  <img src="../img/product-card--list.png" alt="">
-                </div>
-              </div>
-              <div class="product-card__content">
-                <a class="link" href="#">
-                  Оптические аттеньюаторы разъемного типа<br> Male-Female
-                </a>
-                <div class="product-card__description">
-                  <p class="text">Равным образом сложившаяся структура организации в значительной степени обуславливает создание направлений прогрессивного развития. Таким образом начало повседневной работы по формированию позиции. </p>
-                </div>
-              </div>
-              <div class="product-list__bottom">
-                <div class="content-spacer">
-                  <span class="brand">Edimax</span>
-                  <span class="price"><span class="price-from">от</span> <span class="price-num">400 004</span> грн</span>
-                </div>
-                <div class="product-card__button">
-                  <a href="#" class="buy">В корзину</a>
-                  <span class="ask">Узнать цену</span>
-                  <a href="#" class="modifier">Выбрать Модификацию</a>
+                  <span class="remove">Удалить</span>
                 </div>
               </div>
               <div class="product-card__files">
