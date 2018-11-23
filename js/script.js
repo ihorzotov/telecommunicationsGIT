@@ -487,12 +487,12 @@ $(document).ready(function(){
           values: [ inputLeftVal, inputRightVal ]
         });
         
-        if (thisVal > sliderMaxValue || thisVal > sliderMaxValue ) {
+        if (thisVal > sliderMaxValue ) {//|| thisVal > sliderMaxValue 
           $(this).val(sliderMaxValue);
         } else if(thisVal < sliderMinValue){
           $(this).val(sliderMinValue);
         }
-        if (thisVal > inputRightCurrent || thisVal > inputRightVal && thisVal > sliderMaxValue){
+        if (thisVal > inputRightCurrent || thisVal > inputRightVal && thisVal > sliderMaxValue || inputRightVal < thisVal){
            inputLeft.val(inputRightVal);
            $(item).find(".slider-range").slider({
             values: [inputRightVal ,inputRightVal]
