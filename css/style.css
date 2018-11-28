@@ -5700,6 +5700,18 @@ input, button {
   top: 2px;
 }
 
+.cart-card.kit .cart-old__price {
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #ababab;
+  margin-bottom: 8px;
+}
+
+.cart-card.kit .amount-block {
+  margin-bottom: 10px;
+}
+
 .cart-card.kit .kit__total {
   font-size: 18px;
   font-weight: 700;
