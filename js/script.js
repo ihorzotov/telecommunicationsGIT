@@ -3,6 +3,13 @@ document.addEventListener("touchstart", function(){}, true);
 // document ready
 $(document).ready(function(){
 
+$('.js-card').on('click','.buy',function(){
+  $('.header-content__cart').addClass('added');
+  setTimeout (function(){
+    $('.header-content__cart').removeClass('added');
+  },400);
+});
+
 function TabsSlick(idOfEl){
   var idOfEl = $('.directions-nav__button.active').attr('id');
   $(document).find('.directions-content[data-target='+idOfEl+'].active .directions-tabs__slider').slick({
@@ -33,12 +40,10 @@ $('.directions-nav__button ,.news-tabs__button').click(function(){
   var targetEl =  $('.directions-content[data-target='+idOfEl+'] ,.news-content[data-target='+idOfEl+']');
   targetEl.addClass('active').siblings().removeClass('active');
   
-  if ($('.directions-content[data-target='+idOfEl+']').find('.directions-tabs__slider').hasClass('slick-initialized')) {
-    //return false;
-    $('.directions-tabs__slider').slick('unslick');
+  if (!$('.directions-content[data-target='+idOfEl+']').find('.directions-tabs__slider').hasClass('slick-initialized')) {
     TabsSlick(idOfEl);
   }else{
-    TabsSlick(idOfEl);
+    $('.directions-content.active .directions-tabs__slider').slick('refresh');
   }
 });
 
@@ -101,33 +106,22 @@ mediaJS();
     });
   });
   $('.wrap-drop').each(function(key,item){
-  var selectedText = $(item).find('.selected').text();
-    $(item).find('.selected-el span').text(selectedText);
-});
+    var selectedText = $(item).find('.selected').text();
+      
+      $(item).not('.connector-dropdown,.polishing-dropdown').find('.selected-el span').text(selectedText);
 
-  $('.wrap-drop').on('click','.drop>li',function(){
-      var thisText = $(this).text()
-      $(this).addClass('selected').siblings().removeClass('selected');
-      $(this).parents('.wrap-drop').find('.selected-el span').text(thisText);
-    });
-$('.wrap-drop').on('click', function(){
-    $(this).toggleClass('active');
+      $(item).on('click', function(){
+        $('.wrap-drop').not(this).removeClass('active');
+        $(this).toggleClass('active');
+      });
+
+      $(item).on('click','.drop>li',function(){
+        var thisText = $(this).text();
+        $(this).addClass('selected').siblings().removeClass('selected');
+        $(this).parents('.wrap-drop').find('.selected-el span').text(thisText);
+      });
   });
 });
-
-
-// slider on news page
-
-  // var tabsButtonWidth = $('.news-tabs__content').width();
-  // var tabsButtonRealWidth = $('.news-tabs__content')[0].scrollWidth;
-  // $(document).on('scroll','.news-tabs__content', function(){
-  //   $('.overflow-arrow').removeClass('active');
-  // });
-  // if (tabsButtonRealWidth > tabsButtonWidth){
-  //   $('.overflow-arrow').addClass('active');
-  // };
-
-
 
 
 
@@ -864,20 +858,22 @@ $(window).on('mouseup',function(event){
 $(document).on('click', function(event){
   var if_neededelement = $(event.target).parent('.call-back__form').length;
   var if_thisbutton = $(event.target).hasClass('js-call__back')? true: $(event.target).parents('.js-call__back').length > 0? true: false;
- 
-  if(!if_thisbutton && !if_neededelement){
-    $('.header-content__contacts').removeClass('call');
-  }
-
+      if(!if_thisbutton && !if_neededelement){
+        $('.header-content__contacts').removeClass('call');
+      };
 });
+
 $(document).on('click', function(event){
   var if_neededelement = $(event.target).parent('.header-content__form').length;
   var if_thisbutton = $(event.target).hasClass('form-holder__btn')? true: $(event.target).parents('.form-holder__btn').length > 0? true: false;
- 
-  if(!if_thisbutton && !if_neededelement){
-    $('.form-holder').removeClass('active');
-  }
+      if(!if_thisbutton && !if_neededelement){
+        $('.form-holder').removeClass('active');
+      }
 });
+
+var solutionsHeight = $('.solutions .tabs-card__text').height(),
+    solutionsRealHeight = $('.solutions .tabs-card__text').prop('scrollHeight');
+  (solutionsHeight+60 < solutionsRealHeight || solutionsHeight == solutionsRealHeight )? $('.solutions .tabs-card .link').addClass('hidden'): $('.solutions .tabs-card .link').removeClass('hidden');
 
 $('.solutions .tabs-card .link').click(function(){
   $(this).parent('.tabs-card').toggleClass('active');
